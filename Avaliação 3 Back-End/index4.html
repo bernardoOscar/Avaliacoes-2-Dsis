@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior Número</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f2f2f2; padding: 20px; max-width: 400px; margin: 0 auto; }
+        .cartao { background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        input { padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; width: 90%; }
+        button { padding: 8px 15px; background-color: #005f73; color: white; border: none; border-radius: 4px; cursor: pointer; width: 100%; }
+        button:hover { background-color: #0a9396; }
+        .resultado { margin-top: 15px; font-weight: bold; color: #ae2012; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="cartao">
+        <h2>Maior entre Três</h2>
+        <input type="number" id="n1" placeholder="Número 1">
+        <input type="number" id="n2" placeholder="Número 2">
+        <input type="number" id="n3" placeholder="Número 3">
+        <button onclick="verificar()">Achar o Maior</button>
+        <p class="resultado" id="res"></p>
+    </div>
+
+    <script>
+        function verificar() {
+            let n1 = Number(document.getElementById('n1').value);
+            let n2 = Number(document.getElementById('n2').value);
+            let n3 = Number(document.getElementById('n3').value);
+            
+            let maior = n1;
+            if (n2 > maior) maior = n2;
+            if (n3 > maior) maior = n3;
+
+            document.getElementById('res').innerText = "O maior é: " + maior;
+        }
+    </script>
+</body>
+</html>

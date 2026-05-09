@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Triângulos</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f2f2f2; padding: 20px; max-width: 400px; margin: 0 auto; }
+        .cartao { background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        input { padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; width: 90%; }
+        button { padding: 8px 15px; background-color: #005f73; color: white; border: none; border-radius: 4px; cursor: pointer; width: 100%; }
+        button:hover { background-color: #0a9396; }
+        .resultado { margin-top: 15px; font-weight: bold; color: #ae2012; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="cartao">
+        <h2>Validador de Triângulos</h2>
+        <input type="number" id="lA" placeholder="Lado A">
+        <input type="number" id="lB" placeholder="Lado B">
+        <input type="number" id="lC" placeholder="Lado C">
+        <button onclick="verificar()">Verificar Triângulo</button>
+        <p class="resultado" id="res"></p>
+    </div>
+
+    <script>
+        function verificar() {
+            let a = Number(document.getElementById('lA').value);
+            let b = Number(document.getElementById('lB').value);
+            let c = Number(document.getElementById('lC').value);
+
+            let podeFormar = (a < b + c) && (b < a + c) && (c < a + b);
+
+            if (podeFormar) {
+                if (a === b && b === c) {
+                    document.getElementById('res').innerText = "Equilátero";
+                } else if (a === b || a === c || b === c) {
+                    document.getElementById('res').innerText = "Isósceles";
+                } else {
+                    document.getElementById('res').innerText = "Escaleno";
+                }
+            } else {
+                document.getElementById('res').innerText = "Não forma triângulo.";
+            }
+        }
+    </script>
+</body>
+</html>
