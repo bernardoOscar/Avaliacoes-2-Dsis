@@ -1,0 +1,48 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+}
+
+
+.conteudo {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.titulo {
+    background-color: #e0e0e0; 
+}
+
+
+.parallax {
+    min-height: 400px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+
+#img-nurburgring {
+    background-image: url('10-nurburgring-facts-revealed-photo-323368-s-original.avif');
+}
+
+#img-ruhrgebiet {
+    background-image: url('ruhrgebiet_duisburg_landschaftspark_0237_-_tourismus_nrw_e.v._a1.jpg');
+}
+
+#img-musica {
+    background-image: url('musica.jpg');
+}
+
+#img-pretzel {
+    background-image: url('pretzel.jpg');
+}
+
+#img-schnitzel {
+    background-image: url('schnitzel.jpg');
+}
